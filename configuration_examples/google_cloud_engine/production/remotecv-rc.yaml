@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: remotecv
-          image: apsl/remotecv:latest
+          image: arcivr/remotecv:latest
           env:
           - name: REMOTECV_REDIS_HOST
             value: redis

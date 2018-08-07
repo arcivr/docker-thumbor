@@ -1,4 +1,4 @@
-FROM apsl/thumbor
+FROM arcivr/thumbor
 MAINTAINER Edu Herraiz <ghark@gmail.com>
 
 RUN pip uninstall -y pillow; true;

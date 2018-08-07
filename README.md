@@ -1,23 +1,23 @@
 Minimal Usage
 ================
 ```
-$ docker run -p 8000:8000 apsl/thumbor
+$ docker run -p 8000:8000 arcivr/thumbor
 $ wget http://localhost:8000/unsafe/300x300/i.imgur.com/bvjzPct.jpg
 ```
 
 Docker thumbor and remotecv
 ========================
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/apsl/thumbor.svg)](https://hub.docker.com/r/apsl/thumbor/)
-[![Docker Stars](https://img.shields.io/docker/stars/apsl/thumbor.svg)](https://hub.docker.com/r/apsl/thumbor/)
-[![Build Status](https://travis-ci.org/APSL/docker-thumbor.svg?branch=master)](https://travis-ci.org/APSL/docker-thumbor)
+[![Docker Pulls](https://img.shields.io/docker/pulls/arcivr/thumbor.svg)](https://hub.docker.com/r/arcivr/thumbor/)
+[![Docker Stars](https://img.shields.io/docker/stars/arcivr/thumbor.svg)](https://hub.docker.com/r/arcivr/thumbor/)
+[![Build Status](https://travis-ci.org/arcivr/docker-thumbor.svg?branch=master)](https://travis-ci.org/arcivr/docker-thumbor)
 
 Docker image for thumbor, and separated one for remotecv, necessary for the lazy detection.  
 All parameters of the thumbor config can be set with env vars.  
 The thumbor's docker expose port 8000 with the service.  
 Consider to use the docker-thumbor-nginx image to use nginx like a first cache.  
 The nginx cache check if the file exists in a shared volume (file_storage) after to send the request to thumbor (automated failover).  
-We propose two thumbor images aspl/thumbor and apsl/thumbor-multiprocess.  
+We propose two thumbor images aspl/thumbor and arcivr/thumbor-multiprocess.  
 The first one (monoprocess) to use under a docker organization tool and the second one use circus to increase the number of thumbor processes. Use multiprocess if you need to deploy in one host and scale up.  
 The remotecv could be scaled increasing the number of docker images using the same redis queue.
 
@@ -45,10 +45,10 @@ Docker-compose examples
 
 Check the docker-compose examples:
 
-* [Simple detection](https://github.com/APSL/docker-thumbor/blob/master/configuration_examples/docker-compose/detector.yml)
-* [Lazy detection using redis](https://github.com/APSL/docker-thumbor/blob/master/configuration_examples/docker-compose/lazy-detector.yml)
-* [AWS S3 storage](https://github.com/APSL/docker-thumbor/blob/master/configuration_examples/docker-compose/aws-s3-storage.yml)
-* [Proposed use in production, reading from a AWS S3 and local cache of storage/result_storage](https://github.com/APSL/docker-thumbor/blob/master/configuration_examples/docker-compose/production.yml)
+* [Simple detection](https://github.com/arcivr/docker-thumbor/blob/master/configuration_examples/docker-compose/detector.yml)
+* [Lazy detection using redis](https://github.com/arcivr/docker-thumbor/blob/master/configuration_examples/docker-compose/lazy-detector.yml)
+* [AWS S3 storage](https://github.com/arcivr/docker-thumbor/blob/master/configuration_examples/docker-compose/aws-s3-storage.yml)
+* [Proposed use in production, reading from a AWS S3 and local cache of storage/result_storage](https://github.com/arcivr/docker-thumbor/blob/master/configuration_examples/docker-compose/production.yml)
 
 
 Env vars and default value:

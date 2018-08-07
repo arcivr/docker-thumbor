@@ -1,7 +1,7 @@
 version: '2'
 services:
   thumbor:
-    image: apsl/thumbor:latest
+    image: arcivr/thumbor:latest
     volumes:
         - data:/data
     ports:

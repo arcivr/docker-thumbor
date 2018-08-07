@@ -1,4 +1,4 @@
-From: https://github.com/APSL/docker-thumbor/issues/12#issuecomment-191765018
+From: https://github.com/arcivr/docker-thumbor/issues/12#issuecomment-191765018
 By @bf: https://github.com/bf
 
 For AWS Beanstalk you need to create a `Dockerun.aws.json` file with the following contents. Create a new Beanstalk environment and simply upload the JSON file. 
@@ -7,7 +7,7 @@ For AWS Beanstalk you need to create a `Dockerun.aws.json` file with the followi
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "apsl/thumbor"
+    "Name": "arcivr/thumbor"
   },
  "Ports": [
     {
@@ -17,7 +17,7 @@ For AWS Beanstalk you need to create a `Dockerun.aws.json` file with the followi
 }
 ```
 
-As soon as the new environment is booted, you need to go to the configuration section where you can set the environment parameters for the docker container. There you should define the following environment variables to serve files from your AWS S3 Bucket through thumbor to your users (all environment params are listed on https://hub.docker.com/r/apsl/thumbor/ ).
+As soon as the new environment is booted, you need to go to the configuration section where you can set the environment parameters for the docker container. There you should define the following environment variables to serve files from your AWS S3 Bucket through thumbor to your users (all environment params are listed on https://hub.docker.com/r/arcivr/thumbor/ ).
 
 ```
 AWS_ACCESS_KEY_ID=XXXXXX

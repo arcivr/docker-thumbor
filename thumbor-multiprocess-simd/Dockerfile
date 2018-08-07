@@ -1,4 +1,4 @@
-FROM apsl/thumbor-multiprocess
+FROM arcivr/thumbor-multiprocess
 MAINTAINER Edu Herraiz <ghark@gmail.com>
 
 RUN pip uninstall -y pillow; true;

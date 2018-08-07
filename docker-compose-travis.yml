@@ -8,7 +8,7 @@ services:
     ports:
       - "0.0.0.0:9009:8080"
   thumbor:
-    image: apsl/thumbor
+    image: arcivr/thumbor
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -19,7 +19,7 @@ services:
     networks:
       - app
   thumbormultiprocess:
-    image: apsl/thumbor-multiprocess
+    image: arcivr/thumbor-multiprocess
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -30,7 +30,7 @@ services:
     networks:
       - app
   thumborsimdss4:
-    image: apsl/thumbor:latest-simd-sse4
+    image: arcivr/thumbor:latest-simd-sse4
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -41,7 +41,7 @@ services:
     networks:
       - app
   thumbormultiprocesssimdss4:
-    image: apsl/thumbor-multiprocess:latest-simd-sse4
+    image: arcivr/thumbor-multiprocess:latest-simd-sse4
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -52,7 +52,7 @@ services:
     networks:
       - app
   thumborsimdavx2:
-    image: apsl/thumbor:latest-simd-avx2
+    image: arcivr/thumbor:latest-simd-avx2
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -63,7 +63,7 @@ services:
     networks:
       - app
   thumbormultiprocesssimdavx2:
-    image: apsl/thumbor-multiprocess:latest-simd-avx2
+    image: arcivr/thumbor-multiprocess:latest-simd-avx2
     env_file: .travis.env
     volumes:
       - ./data:/data
@@ -74,7 +74,7 @@ services:
     networks:
       - app
   nginx:
-    image: apsl/thumbor-nginx
+    image: arcivr/thumbor-nginx
     links:
       - thumbor:thumbor
     volumes_from:
@@ -85,7 +85,7 @@ services:
     networks:
       - app
   remotecv:
-    image: apsl/remotecv
+    image: arcivr/remotecv
     links:
       - redis:redis
     environment:

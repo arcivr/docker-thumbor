@@ -1,7 +1,7 @@
 version: '2'
 services:
   thumbor:
-    image: apsl/thumbor:latest
+    image: arcivr/thumbor:latest
     volumes:
       - logs:/logs
       - data:/data
@@ -36,7 +36,7 @@ services:
     networks:
       - frontend
   nginx:
-    image: apsl/thumbor-nginx:latest
+    image: arcivr/thumbor-nginx:latest
     links:
       - thumbor:thumbor
     volumes_from:
@@ -47,7 +47,7 @@ services:
     networks:
       - frontend
   remotecv:
-    image: apsl/remotecv:latest
+    image: arcivr/remotecv:latest
     links:
       - redis:redis
     environment:

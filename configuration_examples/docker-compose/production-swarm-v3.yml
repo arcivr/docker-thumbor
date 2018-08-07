@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   thumbor:
-    image: apsl/thumbor:latest
+    image: arcivr/thumbor:latest
     volumes:
       - logs:/logs
       - data:/data
@@ -43,7 +43,7 @@ services:
     networks:
       - frontend
   nginx:
-    image: apsl/thumbor-nginx:latest
+    image: arcivr/thumbor-nginx:latest
     ports:
       - "80:80" # nginx cache port (with failover to thumbor)
     hostname: nginx
@@ -59,7 +59,7 @@ services:
     networks:
       - frontend
   remotecv:
-    image: apsl/remotecv:latest
+    image: arcivr/remotecv:latest
     environment:
       - REMOTECV_REDIS_HOST=redis
       - REMOTECV_REDIS_PORT=6379
