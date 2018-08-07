@@ -10,3 +10,4 @@ libgraphicsmagick-q16-3
 libboost-python-dev
 gifsicle=1.88*
 ffmpeg
+python-pgmagick
