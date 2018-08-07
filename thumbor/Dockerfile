@@ -24,7 +24,9 @@ RUN pip install -r /usr/src/app/requirements.txt
 
 COPY conf/thumbor.conf.tpl /usr/src/app/thumbor.conf.tpl
 
-RUN \ 
+COPY thumbor_padding_filter /usr/local/lib/python2.7/site-packages/thumbor_padding_filter/
+
+RUN \
     ln /usr/lib/python2.7/dist-packages/cv2.x86_64-linux-gnu.so /usr/local/lib/python2.7/cv2.so && \
     ln /usr/lib/python2.7/dist-packages/cv.py /usr/local/lib/python2.7/cv.py
 
