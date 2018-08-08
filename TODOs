@@ -12,7 +12,10 @@ With result storage , without nginx: 748
 With result storage , with nginx: 5237
 
 
-- Extract NGINX @fetch proxy_pass .media into an ENV regex
+
+
+Goal:
+  Be able to run thumbor from docker with proxy_pass regex and padding lib
+
+- Extract NGINX @fetch proxy_pass .media into an ENV regex (REWRITE_PATTERNS)
 - Build Nginx off apsl/thumbor-nginx
-- Extract padding lib into pip package
-- Build thumbor off apsl/thumbor
