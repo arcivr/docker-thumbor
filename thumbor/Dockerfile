@@ -1,4 +1,4 @@
-FROM apsl/thumbor
+FROM minimalcompact/thumbor
 
 MAINTAINER Derek Lucas <derek.lucas@arcivr.com>
 
