@@ -1,6 +1,5 @@
 FROM minimalcompact/thumbor
-
-MAINTAINER Derek Lucas <derek.lucas@arcivr.com>
+LABEL maintainer="Arcivr"
 
 ARG requirements
 

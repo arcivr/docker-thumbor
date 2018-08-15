@@ -1,8 +1,4 @@
-FROM nginx:1.11.5
-MAINTAINER Edu Herraiz <ghark@gmail.com>
+FROM minimalcompact/thumbor-nginx-proxy
+LABEL maintainer="Arcivr"
 
-COPY nginx.conf /etc/nginx/
-COPY ./docker-entrypoint.sh /
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["nginx-daemon"]
+COPY /nginx/nginx.tmpl /app/
