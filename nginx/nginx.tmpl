@@ -31,6 +31,7 @@
     {{ $corsOrigin := (first (groupByKeys .Containers "Env.CORS_ALLOW_ORIGIN")) }}
 
     location ~* "^/(?<path>..)(?<path2>..)(.+)?$" {
+        default_type image/jpeg;
         root        /data/result_storage/v2;
         expires     1M;
 
