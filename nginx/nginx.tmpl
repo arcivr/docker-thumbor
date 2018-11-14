@@ -35,7 +35,7 @@
         expires     1M;
 
         {{ if .RewritePatterns }}
-            rewrite ^(.*)$ {{ .RewritePatterns }} redirect;
+            rewrite {{ .RewritePatterns }} break;
         {{ end }}
 
         {{ if or $allowCors $corsOrigin }}
